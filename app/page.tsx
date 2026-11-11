@@ -3,10 +3,10 @@
 import { useMemo, useState } from "react";
 
 const properties = [
-  { title: "Large Flats in Lagos, Nigeria", count: "Over 3,500+ listings", image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85", keywords: "flat apartment lagos nigeria" },
-  { title: "Highrise buildings in New York, USA", count: "Over 5,000+ listings", image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=85", keywords: "highrise building new york usa" },
-  { title: "Farm Lands in Niger, Nigeria", count: "Over 400+ listings", image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=85", keywords: "farm land niger nigeria" },
-  { title: "Beach Houses in Rio, Brazil", count: "Over 23,700+ listings", image: "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&w=900&q=85", keywords: "beach house rio brazil" },
+  { title: "Large Flats in Lagos, Nigeria", count: "Over 3,500+ listings", image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=90", keywords: "flat apartment lagos nigeria" },
+  { title: "Highrise buildings in New York, USA", count: "Over 5,000+ listings", image: "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1200&q=90", keywords: "highrise building new york usa" },
+  { title: "Farm Lands in Niger, Nigeria", count: "Over 400+ listings", image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=90", keywords: "farm land niger nigeria" },
+  { title: "Beach Houses in Rio, Brazil", count: "Over 23,700+ listings", image: "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&w=1200&q=90", keywords: "beach house rio brazil" },
 ];
 
 const reviews = [
