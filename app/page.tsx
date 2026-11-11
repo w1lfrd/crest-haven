@@ -96,12 +96,21 @@ export default function Home() {
       </section>
 
       <section className="closing">
-        <h2>We’ve Got Properties You<br />Can’t Miss Out On</h2>
-        <p>With over 50,000+ listings, apartments and plots<br /> available to fit a diverse choice set.</p>
-        <button className="btn btn-white" onClick={() => setContactOpen(true)}>Give us a call</button>
+        <div className="closing-orbit orbit-one"></div><div className="closing-orbit orbit-two"></div>
+        <div className="closing-kicker"><span></span> YOUR NEXT CHAPTER STARTS HERE</div>
+        <h2>Somewhere out there,<br /><em>there’s a place for you.</em></h2>
+        <p>Let’s find the one that feels right. We’ll help you make the next move.</p>
+        <button className="closing-button" onClick={() => setContactOpen(true)}>Let’s find your place <span>↗</span></button>
+        <div className="closing-mark">CH<span>⌂</span></div>
       </section>
 
-      <footer className="footer"><a href="#home">Crest Haven</a><nav><a href="#about">About us</a><a href="#listings">Listings</a><a href="#testimonials">Testimonials</a><a href="#articles">Articles</a></nav></footer>
+      <footer className="footer">
+        <div className="footer-top">
+          <div className="footer-brand"><a className="footer-logo" href="#home">Crest Haven<span>®</span></a><p>Good spaces. Better beginnings.</p><div className="footer-social"><a href="#home" aria-label="Instagram">ig</a><a href="#home" aria-label="LinkedIn">in</a><a href="#home" aria-label="X">𝕏</a></div></div>
+          <div className="footer-links"><div><span className="footer-label">EXPLORE</span><a href="#about">About us</a><a href="#listings">Property listings</a><a href="#testimonials">Testimonials</a><a href="#articles">Our stories</a></div><div><span className="footer-label">LET’S TALK</span><button onClick={() => setContactOpen(true)}>Get in touch ↗</button><a href="#listings">Find a property</a><a href="#listings">Shortlet stays</a></div></div>
+        </div>
+        <div className="footer-bottom"><span>© {new Date().getFullYear()} Crest Haven. All rights reserved.</span><span>Made for the place you’ll call yours.</span><a href="#home">Back to top ↑</a></div>
+      </footer>
 
       {contactOpen && <div className="modal-backdrop" onClick={() => { setContactOpen(false); setSubmitted(false); }}><section className="contact-modal" role="dialog" aria-modal="true" aria-labelledby="contact-title" onClick={(e) => e.stopPropagation()}><button className="modal-close" aria-label="Close" onClick={() => { setContactOpen(false); setSubmitted(false); }}>×</button>{submitted ? <><h2>Thank you.</h2><p>Your enquiry has been recorded in this demo.</p><button className="btn btn-black" onClick={() => { setContactOpen(false); setSubmitted(false); }}>Close</button></> : <><span className="eyebrow">GET IN TOUCH</span><h2 id="contact-title">How can we help?</h2><p>Leave your details and tell us what you are looking for.</p><form onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }}><label>Name<input required placeholder="Your name" /></label><label>Email<input required type="email" placeholder="Email address" /></label><label>I'm interested in<select defaultValue="Property enquiry"><option>Property enquiry</option><option>Shortlet booking</option><option>Referral</option></select></label><button className="btn btn-black" type="submit">Send enquiry</button></form></>}</section></div>}
     </main>
